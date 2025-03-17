@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const landingPageRoute = require('./routes/landingPage')
@@ -7,6 +8,7 @@ const loginPageRoute = require('./routes/loginPage')
 
 // Create express app
 const app = express()
+app.use(cors())
 
 //Middleware (Middle of getting request and sending response)
 app.use(express.json())
@@ -17,7 +19,7 @@ app.use((req, res, next) => {
 
 // Routes //
 //Use ./routes/landingPage.js router
-app.use('/api/', landingPageRoute)
+app.use('/', landingPageRoute)
 
 // Use ./route/loginPage.js router
 app.use('/login', loginPageRoute)

@@ -1,10 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 const Landing = () => {
+    const [menus, setMenus] = useState(null)
 
     useEffect(() => {
         const fetchMenu = async () => {
-            const response = await fetch('/')
+            const response = await fetch('http://localhost:4000/api/menu/')
+            const json = await response.json()
+
+            // Check if response is ok
+            if (response.ok){
+                setMenus(json)
+            }
         }
 
         fetchMenu()
@@ -12,7 +19,12 @@ const Landing = () => {
 
     return (
         <div className="home">
-            <h2>Home</h2>
+            <div className="menus">
+                {/* Template for each item of the menu */}
+                {menus && menus.map((menu) => (
+                    <p key={menu._id}>{menu.name}</p>
+                ))}
+            </div>
         </div>
     )
 }
