@@ -2,12 +2,22 @@
 // Use GET method for images that might need to be changed.
 
 const express = require('express')
+const {
+    createMenu, // delete later, dont need to create menu in the landing page
+    getMenus,
+    getMenu
+} = require('../controllers/menuControllers')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.json({mssg: 'GET all'})
-})
+// Get all menus
+router.get('/', getMenus)
+
+// Get a single menu
+router.get('/:id', getMenu)
+
+// Test POST method
+router.post('/', createMenu)
 
 module.exports = router
 

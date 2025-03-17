@@ -23,7 +23,7 @@ app.use('/', landingPageRoute)
 app.use('/login', loginPageRoute)
 
 // Connect to DB
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONG_URI)
     .then(() => {
         //Listening for request once connected to the DB
         app.listen(process.env.PORT, () =>{
