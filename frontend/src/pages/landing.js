@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 
+// Components
+import MenuDetails from "../components/menuDetails"
+
 const Landing = () => {
     const [menus, setMenus] = useState(null)
 
@@ -22,7 +25,8 @@ const Landing = () => {
             <div className="menus">
                 {/* Template for each item of the menu */}
                 {menus && menus.map((menu) => (
-                    <p key={menu._id}>{menu.name}</p>
+                    // Later make
+                    <MenuDetails key={menu._id} menu={menu}/>
                 ))}
             </div>
         </div>
