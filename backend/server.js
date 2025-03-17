@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 // Routes //
 //Use ./routes/landingPage.js router
-app.use('/', landingPageRoute)
+app.use('/api/', landingPageRoute)
 
 // Use ./route/loginPage.js router
 app.use('/login', loginPageRoute)
