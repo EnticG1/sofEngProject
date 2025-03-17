@@ -43,15 +43,50 @@ const createMenu = async (req, res) => {
 }
 
 // delete a menu
+const deleteMenu = async (req, res) => {
+    const { id } = req.params
 
+    // Make sure ID is valid
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: 'Menu not found'})
+    }
+
+    // Delete menu by id
+    const menu = await Menu.findOneAndDelete({_id: id})
+
+    if (!menu) {
+        return res.status(404).json({error: 'Menu not found'})
+    }
+
+    res.status(200).json(menu)
+}
 
 // update a menu
 
+const updateMenu = async (req, res) => {
+    const { id } = req.params
 
+    // Make sure ID is valid
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: 'Menu not found'})
+    }
+
+    const menu = await Menu.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if (!menu) {
+        return res.status(404).json({error: 'Menu not found'})
+    }
+    
+    res.status(200).json(menu)
+}
 
 // Export
 module.exports = {
     createMenu,
     getMenu,
-    getMenus
+    getMenus,
+    deleteMenu,
+    updateMenu
 }

@@ -5,7 +5,9 @@ const express = require('express')
 const {
     createMenu, // delete later, dont need to create menu in the landing page
     getMenus,
-    getMenu
+    getMenu,
+    deleteMenu,
+    updateMenu
 } = require('../controllers/menuControllers')
 
 const router = express.Router()
@@ -17,7 +19,13 @@ router.get('/', getMenus)
 router.get('/:id', getMenu)
 
 // Test POST method
-router.post('/', createMenu)
+router.post('/', createMenu) // Delete later
+
+// Test DELETE method
+router.delete('/:id', deleteMenu)
+
+// Test UPDATE method
+router.patch('/:id', updateMenu)
 
 module.exports = router
 
