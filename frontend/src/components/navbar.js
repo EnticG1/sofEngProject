@@ -7,6 +7,9 @@ const Navbar = () => {
                 <Link to="/">
                     <h1>Landing page (edit later)</h1>
                 </Link>
+                <div className="navbarNavigation">
+                    {/* Link to other part of the website */}
+                </div>
             </div>
         </header>
     )
