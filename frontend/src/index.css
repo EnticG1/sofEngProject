@@ -78,3 +78,119 @@ header a {
 .menuDescription {
   word-wrap: break-word;
 }
+
+/* Admin page */
+
+.admin {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 5px;
+}
+
+.adminHeader{
+  word-wrap: break-word;
+  width: 20em;
+}
+
+.adminForm {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 80%;
+}
+
+.adminForm h3{
+  color: var(--primary);
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.admin-details {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 80%;
+}
+
+.admin-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.admin-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+  word-wrap: break-word;
+}
+.admin-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.adminAction{
+  margin: 0 0;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-column: 2em;
+  gap: 8px;
+}
+
+.adminButton{
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.244);
+  border-radius: 50%;
+}
+
+/* new menu form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}

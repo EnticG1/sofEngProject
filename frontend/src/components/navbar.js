@@ -5,7 +5,7 @@ const Navbar = () => {
         <header>
             <div className="container">
                 <Link to="/">
-                    <h1>Landing page (edit later)</h1>
+                    <h1>Name (edit later)</h1>
                 </Link>
                 <div className="navbarNavigation">
                     {/* Link to other part of the website */}

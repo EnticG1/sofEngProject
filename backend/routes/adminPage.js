@@ -3,8 +3,11 @@
 
 const express = require('express')
 const {
+    createMenu,
     getMenus,
-    getMenu
+    getMenu,
+    deleteMenu,
+    updateMenu
 } = require('../controllers/menuControllers')
 
 const router = express.Router()
@@ -14,6 +17,15 @@ router.get('/api/menu/', getMenus)
 
 // Get a single menu
 router.get('/api/menu/:id', getMenu)
+
+// Test POST method
+router.post('/api/menu/', createMenu) 
+
+// Test DELETE method
+router.delete('/api/menu/:id', deleteMenu)
+
+// Test UPDATE method
+router.patch('/api/menu/:id', updateMenu)
 
 module.exports = router
 

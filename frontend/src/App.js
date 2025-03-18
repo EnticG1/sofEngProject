@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 // Pages & Components
 import Landing from './pages/landing'
 import Navbar from './components/navbar'
+import Admin from './pages/admin'
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
             <Route
               path="/"
               element={<Landing/>}
+            />
+            <Route
+              path="/admin"
+              element={<Admin/>}
             />
           </Routes>
         </div>
