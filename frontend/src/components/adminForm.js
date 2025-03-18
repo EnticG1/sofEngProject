@@ -19,6 +19,8 @@ const MenuAdmin = ({ menu }) => {
                 <h4>{menu.name}</h4>
                 <p><strong>Price: </strong>{menu.price}.000</p>
                 <p><strong>Description: </strong>{menu.desc}</p> 
+                <p><strong>ID: </strong>{menu._id}</p> 
+                <p><strong>Last change: </strong>{menu.updatedAt}</p>
             </div>
             <div className="adminAction">
                 {/* delete button and edit button */}
