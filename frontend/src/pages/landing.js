@@ -24,7 +24,7 @@ const Landing = () => {
         <div className="home">
             <div className="menus">
                 {/* Template for each item of the menu */}
-                {menus && menus.map((menu) => (
+                {menus && menus.slice(0,3).map((menu) => (
                     // Later make
                     <MenuDetails key={menu._id} menu={menu}/>
                 ))}

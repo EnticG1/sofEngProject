@@ -30,6 +30,8 @@ header a {
   margin: 0 auto;
 }
 
+/* For menu item */
+
 .menus {
   display: grid;
   grid-template-columns: min-content min-content min-content;
@@ -41,11 +43,11 @@ header a {
 .menu-details {
   background: #fff;
   border-radius: 4px;
-  margin: 20px auto;
+  margin: 5px 5px;
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  width: 30vw;
+  width: 32vw;
 }
 .menu-details h4 {
   margin: 0 0 10px 0;
