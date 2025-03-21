@@ -14,7 +14,7 @@ const MenuAdmin = ({ menu }) => {
     const { dispatch } = useMenusContext()
 
     const handleDeleteClick = async () => {
-        const response = await fetch('/admin/api/menu/' + menu._id, {
+        const response = await fetch('api/admin/menu/' + menu._id, {
             method: 'DELETE'
         })
         const json = await response.json()

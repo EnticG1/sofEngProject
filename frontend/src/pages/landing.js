@@ -10,7 +10,7 @@ const Landing = () => {
     useEffect(() => {
         const fetchMenu = async () => {
             // Check if connection is okay
-            const response = await fetch('/api/menu/')
+            const response = await fetch('/api/landing/menu/')
             // Get the json data
             const json = await response.json()
 

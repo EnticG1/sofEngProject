@@ -10,7 +10,7 @@ const Admin = () => {
 
     useEffect(() => {
         const fetchMenu = async () => {
-            const response = await fetch('admin/api/menu/')
+            const response = await fetch('api/admin/menu/')
             const json = await response.json()
 
             // Check if response is ok

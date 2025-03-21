@@ -13,18 +13,18 @@ const {
 const router = express.Router()
 
 // Get all menus
-router.get('/api/menu/', getMenus)
+router.get('/menu/', getMenus)
 
 // Get a single menu
-router.get('/api/menu/:id', getMenu)
+router.get('/menu/:id', getMenu)
 
 // Test POST method
-router.post('/api/menu/', createMenu) 
+router.post('/menu/', createMenu) 
 
 // Test DELETE method
-router.delete('/api/menu/:id', deleteMenu)
+router.delete('/menu/:id', deleteMenu)
 
 // Test UPDATE method
-router.patch('/api/menu/:id', updateMenu)
+router.patch('/menu/:id', updateMenu)
 
 module.exports = router

@@ -19,9 +19,9 @@ app.use((req, res, next) => {
 })
 
 // Routes //
-app.use('/', landingPageRoute)
-app.use('/user', userRoute)
-app.use('/admin', adminPageRoute)
+app.use('/api/landing', landingPageRoute)
+app.use('/api/user', userRoute)
+app.use('/api/admin', adminPageRoute)
 
 // Connect to DB
 mongoose.connect(process.env.MONG_URI)

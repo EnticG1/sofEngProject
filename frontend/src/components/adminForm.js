@@ -15,7 +15,7 @@ const AdminForm = () => {
 
         const menu = {name, desc, price}
 
-        const response = await fetch('admin/api/menu', {
+        const response = await fetch('api/admin/menu', {
             method: 'POST',
             body: JSON.stringify(menu),
             headers:{

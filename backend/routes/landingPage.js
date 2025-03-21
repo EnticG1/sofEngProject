@@ -10,10 +10,10 @@ const {
 const router = express.Router()
 
 // Get all menus
-router.get('/api/menu/', getMenus)
+router.get('/menu', getMenus)
 
 // Get a single menu
-router.get('/api/menu/:id', getMenu)
+router.get('/menu/:id', getMenu)
 
 module.exports = router
 
