@@ -1,24 +1,27 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useMenusContext } from "../hooks/useMenusContext"
 
 // Components
 import MenuDetails from "../components/menuDetails"
 
 const Landing = () => {
-    const [menus, setMenus] = useState(null)
+    const {menus, dispatch} = useMenusContext()
 
     useEffect(() => {
         const fetchMenu = async () => {
-            const response = await fetch('http://localhost:4000/api/menu/')
+            // Check if connection is okay
+            const response = await fetch('/api/menu/')
+            // Get the json data
             const json = await response.json()
 
-            // Check if response is ok
+            // If connection is ok, send payload to menuContext as action
             if (response.ok){
-                setMenus(json)
+                dispatch({type: 'SET_MENUS', payload: json})
             }
         }
-
+        
         fetchMenu()
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="home">

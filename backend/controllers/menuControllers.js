@@ -33,12 +33,28 @@ const getMenu = async (req, res) => {
 const createMenu = async (req, res) => {
     const {name, desc, price} = req.body
 
+    // Check if there are empty fields
+    let emptyFields = []
+
+    if(!name){
+        emptyFields.push('name')
+    }
+    if(!desc){
+        emptyFields.push('desc')
+    }
+    if(!price){
+        emptyFields.push('price')
+    }
+    if(emptyFields.length > 0){
+        return res.status(400).json({error: 'Please fill in all the data', emptyFields})
+    }
+
     // Add doc to db
     try{
         const menu = await Menu.create({name, desc, price})
         res.status(200).json(menu)
     } catch(error) { // Catch error
-        res.status(400).json({error: error.message})
+        res.status(400).json({error: error.message, emptyFields})
     }
 }
 
