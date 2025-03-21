@@ -4,7 +4,7 @@ const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const landingPageRoute = require('./routes/landingPage')
-const loginPageRoute = require('./routes/loginPage')
+const userRoute = require('./routes/user')
 const adminPageRoute = require('./routes/adminPage')
 
 // Create express app
@@ -19,13 +19,8 @@ app.use((req, res, next) => {
 })
 
 // Routes //
-//Use ./routes/landingPage.js router
 app.use('/', landingPageRoute)
-
-// Use ./route/loginPage.js router
-app.use('/login', loginPageRoute)
-
-// Use ./route/loginPage.js router
+app.use('/user', userRoute)
 app.use('/admin', adminPageRoute)
 
 // Connect to DB

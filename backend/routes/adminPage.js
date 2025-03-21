@@ -28,5 +28,3 @@ router.delete('/api/menu/:id', deleteMenu)
 router.patch('/api/menu/:id', updateMenu)
 
 module.exports = router
-
-// Need to finish up the routing
