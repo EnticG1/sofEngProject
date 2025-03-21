@@ -17,6 +17,7 @@ app.use((req, res, next) => {
     console.log("Path:", req.path, "| Method:", req.method) //Log request coming in
     next() //Allows code to continue
 
+})
 // Routes //
 app.use('/api/landing', landingPageRoute)
 app.use('/api/user', userRoute)
@@ -33,4 +34,3 @@ mongoose.connect(process.env.MONG_URI)
     .catch((error) => { //Error catching
         console.log(error)
     })
-})
