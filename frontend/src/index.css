@@ -210,3 +210,23 @@ form.signup, form.login {
   text-align: center;
   align-content: center;
 }
+
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.nav-menu{
+  align-items: center;
+  margin: 0 0;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-column: 2em;
+  gap: 8px;
+}
