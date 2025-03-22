@@ -66,9 +66,8 @@ const AdminForm = () => {
                 value={price}
                 className={emptyFields.includes('price') ? 'error' : ''}
             />
-
-            <button>Add Menu</button>
             {error && <div className="error">{error}</div>}
+            <button>Add Menu</button>
         </form>
     )
 }
