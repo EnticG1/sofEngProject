@@ -9,7 +9,5 @@ export const useMenusContext = () => {
         throw Error("useMenusContext must be used inside an MenusContextProvider")
     }
 
-    
-
     return context
 }
