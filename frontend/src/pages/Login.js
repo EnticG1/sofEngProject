@@ -1,14 +1,18 @@
-import {useState} from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLogin } from "../hooks/useLogin";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
+  const {login, error, isLoading} = useLogin()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    
+    
+
+    await login(email, password)
   };
 
   return (
@@ -26,8 +30,8 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-
-      <button>Login</button>
+      {error && <div className="error">{error}</div>}
+      <button disabled= {isLoading}>Login</button>
     <h3>Don't have account? <strong><Link to="/signup">Register</Link></strong></h3> 
     </form>
   )
