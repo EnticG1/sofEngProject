@@ -9,8 +9,11 @@ const {
     deleteMenu,
     updateMenu
 } = require('../controllers/menuControllers')
+const requireAuth = require('../middleware/requireAuth') // Make sure that only admin account can access
 
 const router = express.Router()
+
+router.use(requireAuth)
 
 // Get all menus
 router.get('/menu/', getMenus)
