@@ -2,14 +2,6 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-// const imageSchema = new Schema({
-//     img: {
-//         data: Buffer,
-//         type: String
-//     }
-// })
-
-// Schema buat data makanan yang bakal dijual (Nama, deskripsi, harga, etc.)
 const menuSchema = new Schema({
     name: {
         type: String,
@@ -22,6 +14,9 @@ const menuSchema = new Schema({
     price: {
         type: Number,
         required: true
+    },
+    image: {
+      type: String
     }
 }, {timestamps: true})
 

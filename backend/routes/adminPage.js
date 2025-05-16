@@ -10,24 +10,17 @@ const {
     updateMenu
 } = require('../controllers/menuControllers')
 const requireAuth = require('../middleware/requireAuth') // Make sure that only admin account can access
+const upload = require('../middleware/uploadImage')
 
 const router = express.Router()
 
 router.use(requireAuth)
 
-// Get all menus
+// Routes
 router.get('/menu/', getMenus)
-
-// Get a single menu
 router.get('/menu/:id', getMenu)
-
-// Test POST method
-router.post('/menu/', createMenu) 
-
-// Test DELETE method
+router.post('/menu/', upload.single('image'), createMenu) 
 router.delete('/menu/:id', deleteMenu)
-
-// Test UPDATE method
 router.patch('/menu/:id', updateMenu)
 
 module.exports = router

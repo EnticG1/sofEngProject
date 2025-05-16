@@ -31,19 +31,30 @@ const getMenu = async (req, res) => {
 
 // create new menu
 const createMenu = async (req, res) => {
-    const {name, desc, price} = req.body
+    let menuItem = new Menu({
+      name: req.body.name,
+      desc: req.body.desc,
+      price: req.body.price
+    })
+    if(req.file){
+      menuItem.image = req.file.path
+      res.status(200).json({message: 'File uploaded successfully'})
+    }
 
-    // Check if there are empty fields
+    // Check if there are empty fields in the form
     let emptyFields = []
 
-    if(!name){
+    if(menuItem.name == null){
         emptyFields.push('name')
     }
-    if(!desc){
+    if(menuItem.desc == null){
         emptyFields.push('desc')
     }
-    if(!price){
+    if(menuItem.price == null){
         emptyFields.push('price')
+    }
+    if (menuItem.image == null){
+        emptyFields.push('image')
     }
     if(emptyFields.length > 0){
         return res.status(400).json({error: 'Please fill in all the data', emptyFields})
@@ -51,7 +62,7 @@ const createMenu = async (req, res) => {
 
     // Add doc to db
     try{
-        const menu = await Menu.create({name, desc, price})
+        const menu = await Menu.create(menuItem)
         res.status(200).json(menu)
     } catch(error) { // Catch error
         res.status(400).json({error: error.message, emptyFields})

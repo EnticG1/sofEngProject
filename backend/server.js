@@ -18,6 +18,7 @@ app.use((req, res, next) => {
     next() //Allows code to continue
 
 })
+app.use('/uploads', express.static('uploads'))
 // Routes //
 app.use('/api/landing', landingPageRoute)
 app.use('/api/user', userRoute)
