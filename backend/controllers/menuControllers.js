@@ -38,7 +38,6 @@ const createMenu = async (req, res) => {
     })
     if(req.file){
       menuItem.image = req.file.path
-      res.status(200).json({message: 'File uploaded successfully'})
     }
 
     // Check if there are empty fields in the form
