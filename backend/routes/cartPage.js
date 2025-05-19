@@ -1,5 +1,22 @@
-// Needs:
-// 1. UPDATE - For updating order data.
-// 2. DELETE - Removing order item.
-// 3. POST - maybe?
-// 4. GET - Get all order item to show.
+const express = require('express')
+const {
+  createCart,
+  getCarts,
+  deleteCart,
+  updateCart
+} = require('../controllers/cartControllers')
+
+const router = express.router()
+
+// GET all
+router.get('/user', getCarts)
+
+// POST
+router.post('/user', createCart)
+
+// DELETE
+router.delete('/user/:id', deleteCart)
+
+// UPDATE
+router.patch('/user/:id', updateCart)
+
