@@ -1,6 +1,10 @@
 const menuDetails =  ({ menu }) => {
     return(
         <div className="menu-details">
+          <div>
+            <img src={menu.image}/>
+          </div>
+          <div>
             {/* Want to add image later */}
 
             {/* Menu header is the parent for title and price, i want to make the title and price be next to each other. */}
@@ -15,6 +19,7 @@ const menuDetails =  ({ menu }) => {
             <div className="menuDescription">
                 <p>{menu.desc}</p> 
             </div>
+          </div>
         </div>
     )
 }

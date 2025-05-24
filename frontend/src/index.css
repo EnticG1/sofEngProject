@@ -64,13 +64,20 @@ header a {
 
 .menu-details {
   background: #fff;
+  cursor: pointer;
   border-radius: 4px;
   margin: 5px 5px;
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  width: 32vw;
+  width: min-content;
 }
+
+.menu-details img{
+  width: 15vw;
+  margin-bottom: 1em;
+}
+
 .menu-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
@@ -80,16 +87,6 @@ header a {
   margin: 0;
   font-size: 0.9em;
   color: #555;
-}
-.menu-details span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
-  color: #333;
 }
 
 .menuHeader{
@@ -308,4 +305,17 @@ nav button {
   grid-column: 2em;
   gap: 1em;
   white-space: nowrap;
+}
+
+.adminMenuItem{
+  align-items: center;
+  margin: 0 0;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-column: 2em;
+  gap: 1.2em;
+}
+
+.adminMenuItem img{
+  height: 15em;
 }

@@ -31,11 +31,17 @@ const MenuAdmin = ({ menu }) => {
                 {/* Want to add image later */}
 
                 {/* Menu header is the parent for title and price, i want to make the title and price be next to each other. */}    
-                <h4>{menu.name}</h4>
-                <p><strong>Price: </strong>{menu.price}.000</p>
-                <p><strong>Description: </strong>{menu.desc}</p><br />
-                <p><strong>ID: </strong>{menu._id}</p>
-                <p><strong>Last updated: </strong>{formatDistanceToNow(new Date(menu.updatedAt), {addSuffix: true})}</p>
+                <div className="adminMenuItem">
+                  <img src={menu.image}/>
+                  <div>
+                    <h4>{menu.name}</h4>
+                    <p><strong>Price: </strong>{menu.price}.000</p>
+                    <p><strong>Description: </strong>{menu.desc}</p><br />
+                    <p><strong>Image name: </strong>{menu.image}</p>
+                    <p><strong>ID: </strong>{menu._id}</p>
+                    <p><strong>Last updated: </strong>{formatDistanceToNow(new Date(menu.updatedAt), {addSuffix: true})}</p>
+                  </div>
+                </div>
             </div>
             <div className="adminAction">
                 {/* delete button and edit button */}
