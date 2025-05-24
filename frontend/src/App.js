@@ -6,6 +6,7 @@ import Navbar from './components/navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Admin from './pages/admin'
+import Menus from './pages/menus'
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
             <Route
               path="/signup"
               element={<Signup/>}
+            />
+            <Route
+              path="/menu"
+              element={<Menus/>}
             />
           </Routes>
         </div>

@@ -11,29 +11,45 @@ const Navbar = () => {
   }
 
   return(
-      <header>
-          <div className="container">
-              <Link to="/">
-                  <h1>Name (edit later)</h1>
-              </Link>
-              <nav className='nav-menu'>
-                {user && ( // User When logged in
-                  <div> 
-                    <span>{user.email}</span>
-                    <button onClick={handleLogoutClick}>Logout</button>
-                  </div>
-                )}
-                {!user && ( // User when logged out
-                  <div>
-                      <Link to="/login">Login</Link>
-                  </div>
-                )}
-                <div className="navbarNavigation">
-                    {/* User when logged out */}
-                </div>
-              </nav>
+    <header>
+      <div className="container">
+
+        <Link to="/" className='logo-name'>
+          <h1>Breadily</h1>
+        </Link>
+
+        <nav className='nav-menu'>
+          <div className="navbarNavigation">
+            {/* Menu, about us, FAQ */}
+            <Link to="/menu">
+              <h1>Menu</h1>
+            </Link>
+            <Link to="/aboutUs">
+              <h1>About Us</h1>
+            </Link>
+            <Link to="/faq">
+              <h1>FAQ</h1>
+            </Link>
           </div>
-      </header>
+
+          <div className="divider"></div>
+          {user && ( // User When logged in
+            <div className='logged-in'>
+              <Link to="/" className='logo-name'>
+                <h1>Cart</h1>
+              </Link>
+              <button className="button logoutButton" onClick={handleLogoutClick}>Logout</button>
+            </div>
+          )}
+
+          {!user && ( // User when logged out
+            <div className='login-button'>
+              <Link to="/login" className='login-button'><h1>Login</h1></Link>
+            </div>
+          )}
+        </nav>
+      </div>
+    </header>
   )
 }
 

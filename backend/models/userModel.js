@@ -13,7 +13,11 @@ const userSchema = new Schema({
     password:{
         type: String,
         required: true
-    }
+    },
+    cart:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Menu'
+    }]
 })
 
 // Static login method
