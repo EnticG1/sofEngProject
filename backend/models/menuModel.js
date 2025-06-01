@@ -20,7 +20,5 @@ const menuSchema = new Schema({
     }
 }, {timestamps: true})
 
-// !! Masukin image tapi nanti !! //
-
 // Model
 module.exports = mongoose.model('Menu', menuSchema)
