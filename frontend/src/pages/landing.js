@@ -1,14 +1,12 @@
 import { useEffect } from "react"
 import { useMenusContext } from "../hooks/useMenusContext"
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 
 // Components
 import MenuDetails from "../components/menuDetails"
 import MenuImages from "../components/menuImages"
 
 const Landing = () => {
-  const [scrolled, setScrolled] = useState(false)
   const {menus, dispatch} = useMenusContext()
 
   useEffect(() => {

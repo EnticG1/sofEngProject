@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Admin from './pages/admin'
 import Menus from './pages/menus'
+import Footer from "./components/footer"
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             />
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

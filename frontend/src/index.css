@@ -6,6 +6,8 @@
   --body: #d9b59b;
   --sidebar: #bda46b;
   --primary: #8d6d3a;
+  --primary2: #765b31;
+  --primary3: #503e22;
   --secondary: #efe6c3;
   --error: #e3c4a6;
 }
@@ -457,7 +459,7 @@ nav button {
 }
 
 .shopNowImage .menu-images{
-  padding: 2em;
+  padding: 2em 2em 0em 2em;
   background-color: var(--secondary);
   width: 100%;
 
@@ -502,4 +504,46 @@ nav button {
   font-weight: 500;
   margin-top: 1vh;
   font-size: 0.8vw;
+}
+
+.footerContainer{
+  width: 100%;
+  background-color: var(--primary2);
+}
+
+.footerContent{
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  margin: auto;
+  white-space: nowrap;
+  width: fit-content;
+  display: flex;
+  gap: 10vw;
+  color: var(--secondary);
+}
+
+.footerContent li {
+  list-style: none;
+}
+
+.footerContent ul {
+  margin-left: 0;
+  padding: 0;
+}
+
+.footerContent a{
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.footerCopyright{
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary3);
+  color: var(--secondary);
+}
+
+.footerCopyright h3{
+  margin: 0;
 }
