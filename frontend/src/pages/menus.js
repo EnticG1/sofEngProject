@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useMenusContext } from "../hooks/useMenusContext"
 
 // Components
-import AdminDetails from "../components/adminDetails"
+import MenuDetails from "../components/menuDetails"
 
 const Menus = () => {
   const {menus, dispatch} = useMenusContext()
@@ -27,10 +27,8 @@ const Menus = () => {
         <h1>Our Menu</h1>
         <h3>Our extensive list of flavorful treats and delights</h3>
         <div className="menu-list">
-          {/* Template for each item of the menu */}
           {menus && menus.map((menu) => (
-              // Later make
-              <AdminDetails key={menu._id} menu={menu}/>
+            <MenuDetails key={menu._id} menu={menu}/>
           ))}
         </div>
       </div>

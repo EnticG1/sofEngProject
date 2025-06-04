@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
-import { BiRightArrowAlt, BiCopyright } from "react-icons/bi";
+import { BiRightArrowAlt, BiCopyright, BiLogoTwitter, BiLogoTiktok, BiLogoYoutube, BiLogoInstagram } from "react-icons/bi";
 
 const Footer = () => {
   return(
@@ -12,14 +12,12 @@ const Footer = () => {
             <li><a href=""><BiRightArrowAlt/> About us</a></li>
             <li><a href=""><BiRightArrowAlt/> Our Services</a></li>
             <li><a href=""><BiRightArrowAlt/> Privacy Policy</a></li>
-            <li><a href=""><BiRightArrowAlt/> Affiliate</a></li>
           </ul>
         </div>
         <div className='footerHelp'>
           <h1>Help</h1>
           <ul>
             <li><a href=""><BiRightArrowAlt/> FAQ</a></li>
-            <li><a href=""><BiRightArrowAlt/> Order Status</a></li>
             <li><a href=""><BiRightArrowAlt/> Payment Options</a></li>
             <li><a href=""><BiRightArrowAlt/> Shipping options</a></li>
           </ul>
@@ -28,15 +26,16 @@ const Footer = () => {
           <h1>Shop</h1>
           <ul>
             <li><a href=""><BiRightArrowAlt/> Cakes</a></li>
+            <li><a href=""><BiRightArrowAlt/> Catering</a></li>
           </ul>
         </div>
         <div>
           <h1>Follow Us</h1>
           <ul>
-            <li><a href=""><BiRightArrowAlt/> </a></li>
-            <li><a href=""><BiRightArrowAlt/> </a></li>
-            <li><a href=""><BiRightArrowAlt/> </a></li>
-            <li><a href=""><BiRightArrowAlt/> </a></li>
+            <li><a href=""><BiRightArrowAlt/> Twitter <BiLogoTwitter/></a></li>
+            <li><a href=""><BiRightArrowAlt/> Tiktok <BiLogoTiktok/></a></li>
+            <li><a href=""><BiRightArrowAlt/> Youtube <BiLogoYoutube/></a></li>
+            <li><a href=""><BiRightArrowAlt/> Instagram <BiLogoInstagram/></a></li>
           </ul>
         </div>
       </div>
